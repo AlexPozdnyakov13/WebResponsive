@@ -39,16 +39,15 @@ header {
 }
 
 .man_photo {
-  width: 800;
-  height: 764;
+  max-width: 800px;
+  height: 764px;
 }
-.main {
-  background: #f1e4e6;
-}
+
 .main_content {
   display: flex;
   flex-direction: row;
   align-items: center;
+  background: #f1e4e6;
 }
 
 .main_content_text {
@@ -120,6 +119,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 116px;
 }
 .big_text {
   text-align: center;
@@ -197,9 +197,15 @@ header {
     margin-left: 16px;
     margin-right: 16px;
   }
+
+  .man_photo {
+    max-width: 386px;
+    height: 368px;
+  }
   .grid1 {
     margin-top: none;
     margin-bottom: none;
+    gap: 19px;
   }
   .big {
     margin-top: none;
@@ -208,10 +214,68 @@ header {
     max-width: 50vw;
   }
   .grid2 {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 19px;
   }
   .gri2_cell {
-    width: 50vw;
+    max-width: 734.58px;
+  }
+  .grid2_cell img {
+    width: 734.58px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .center {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .hidden_mobile {
+    display: none;
+  }
+  .main_content {
+    height: 363px;
+    justify-content: center;
+    padding-left: 56px;
+  }
+  .main_text1 {
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 46px;
+    color: #222222;
+  }
+  .main_text2 p {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    color: #222222;
+  }
+  .fashion {
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 44px;
+    color: #f16d7f;
+    text-decoration: none;
+  }
+  .grid1 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .big img {
+    height: 116px;
+  }
+  .grid2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .grid2_cell {
+    min-width: 95vw;
+  }
+  .grid2 img {
+    min-width: 95vw;
   }
 }
